@@ -3,11 +3,11 @@ import { makeStyles } from "@material-ui/styles";
 export default makeStyles((theme) => ({
   root: {
     "& .MuiTextField-root": {
-      // margin: theme.spacing(1),
+      margin: "10px",
     },
   },
   paper: {
-    // padding: theme.spacing(2),
+    padding: "20px",
   },
   form: {
     display: "flex",
