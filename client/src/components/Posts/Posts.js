@@ -12,7 +12,16 @@ const Posts = ({ setCurrentId }) => {
   if (!posts.length && !isLoading) return "No posts";
 
   return isLoading ? (
-    <CircularProgress />
+    <center>
+      <CircularProgress
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        size="7em"
+      />
+    </center>
   ) : (
     <Grid
       className={classes.container}

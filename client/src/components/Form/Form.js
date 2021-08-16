@@ -53,7 +53,8 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
       <Paper className={classes.paper} elevation={6}>
         <Typography variant="h6" align="center">
-          Please Sign In to create your own memories and like other's memories.
+          Please SignIn to create and post your own stories and like or comment
+          other's stories.
         </Typography>
       </Paper>
     );
@@ -79,7 +80,7 @@ const Form = ({ currentId, setCurrentId }) => {
         onSubmit={handleSubmit}
       >
         <Typography variant="h6">
-          {currentId ? `Editing "${post?.title}"` : "Creating a Memory"}
+          {currentId ? `Editing "${post?.title}"` : "Creating a Story"}
         </Typography>
         <TextField
           name="title"
@@ -128,6 +129,9 @@ const Form = ({ currentId, setCurrentId }) => {
           size="large"
           type="submit"
           fullWidth
+          disabled={
+            !postData.title.trim().length || !postData.message.trim().length
+          }
         >
           Submit
         </Button>

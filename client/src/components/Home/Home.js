@@ -79,7 +79,7 @@ const Home = () => {
                 onKeyDown={handleKeyPress}
                 name="search"
                 variant="outlined"
-                label="Search Memories"
+                label="Search Posts"
                 fullWidth
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -97,6 +97,7 @@ const Home = () => {
                 className={classes.searchButton}
                 variant="contained"
                 color="primary"
+                disabled={!search.trim().length && !tags.length}
               >
                 Search
               </Button>

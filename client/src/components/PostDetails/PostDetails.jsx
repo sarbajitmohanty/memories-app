@@ -47,7 +47,7 @@ const Post = () => {
   const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
 
   return (
-    <Paper style={{ padding: "20px", borderRadius: "15px" }} elevation={6}>
+    <Paper style={{ padding: "20px", borderRadius: "10px" }} elevation={6}>
       <div className={classes.card}>
         <div className={classes.section}>
           <Typography variant="h3" component="h2">
@@ -61,16 +61,17 @@ const Post = () => {
           >
             {post.tags.map((tag) => `#${tag} `)}
           </Typography>
-          <Typography gutterBottom variant="body1" component="p">
+          <Typography
+            gutterBottom
+            style={{ whiteSpace: "pre-line" }}
+            variant="body1"
+            component="p"
+          >
             {post.message}
           </Typography>
           <Typography variant="h6">Created by: {post.name}</Typography>
           <Typography variant="body1">
             {moment(post.createdAt).fromNow()}
-          </Typography>
-          <Divider style={{ margin: "20px 0" }} />
-          <Typography variant="body1">
-            <strong>Realtime Chat - coming soon!</strong>
           </Typography>
           <Divider style={{ margin: "20px 0" }} />
           <CommentSection post={post} />
