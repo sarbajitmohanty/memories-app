@@ -1,6 +1,6 @@
 # Main directory of InstaX
 
-![InstaX](https://i.ibb.co/tmbsjTw/InstaX.png)
+![InstaX](https://i.ibb.co/vwJPy6C/InstaX.png)
 
 ## To run the App properly
 
