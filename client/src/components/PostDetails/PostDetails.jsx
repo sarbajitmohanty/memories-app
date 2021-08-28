@@ -109,7 +109,7 @@ const Post = () => {
                     {name}
                   </Typography>
                   <Typography gutterBottom variant="subtitle2">
-                    {message}
+                    {message.split(" ").splice(0, 20).join(" ")}...
                   </Typography>
                   <Typography gutterBottom variant="subtitle1">
                     Likes: {likes.length}
